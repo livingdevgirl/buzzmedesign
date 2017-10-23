@@ -1,0 +1,74 @@
+
+.container {
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.8);
+	padding: 20px;
+	position: relative;
+
+}
+.door-left, .door-right {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	top: 0%;
+	transition: all ease 0.5s;
+	-moz-transition: all ease 0.5s;
+	-webkit-transition: all ease 0.5s;
+	-o-transition: all ease 0.5s;
+	-ms-transition: all ease 0.5;
+
+	line-height: 17;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
+	font-size: 28px;
+}
+.door-left {
+	left: 0%;
+}
+.door-right {
+	left: 49%;
+}
+.container:hover .door-left{
+	left: -49%;
+}
+.container:hover .door-right{
+	left: 100%;
+}
+.image-bg .container {
+	box-shadow: none;
+}
+.image-bg  .container, .diagonal .container{
+	height: 100vh;
+	width: 50vw;
+}
+.image-bg .door-left {
+	background-image: url('http://roofwerksnewsite.review/wp-content/uploads/2017/10/barnDoorLeft.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+.image-bg .door-right{
+	background-image: url('http://roofwerksnewsite.review/wp-content/uploads/2017/10/barnDoorRight.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+.diagonal .door-left, .diagonal .door-right {
+	width: 150%;
+	transform: skew(-45deg);
+}
+.diagonal .door-left {
+	left: -100%;
+}
+.diagonal .door-right {
+	left: 49%;
+}
+.diagonal .container:hover .door-left {
+	left: -200%;
+}
+.diagonal .container:hover .door-right {
+	left: 150%;
+}
